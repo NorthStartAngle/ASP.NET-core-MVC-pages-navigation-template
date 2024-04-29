@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h3 class="display-5">Please choose a button on screen</h3>
+    <a asp-action="NavPage" asp-route-pg="0"  asp-controller="Main">First Page</a> |
+    <a asp-action="NavPage" asp-route-pg="1" asp-controller="Main">Second Page</a> |
+    <a asp-action="NavPage" asp-route-pg="2" asp-controller="Main">Third Page</a>
+
+    @* <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+</div>

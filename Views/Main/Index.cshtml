@@ -1,0 +1,33 @@
+﻿@{
+    
+    string title = "";
+    var intValue = ViewData["page"] as int?;
+    switch(intValue)
+    {
+        case 0:
+            title = "First Page";
+            break;
+        case 1:
+            title = "Second Page";
+            break;
+        case 2:
+            title = "Third Page";
+            break;
+        default:
+            title = "Empty";break;
+    }
+
+    ViewData["Title"] = "Page-" + Convert.ToString(intValue+1);
+}
+
+<h2>@title</h2>
+<h5>1+2 =?</h5>
+@{
+    if (intValue > -1 && intValue < 3)
+    {
+        <form method="post" action="Result">
+            <input type="hidden" name="ret" value="3" />
+            <input type="submit" value="Submit" />
+        </form>
+    }
+}
